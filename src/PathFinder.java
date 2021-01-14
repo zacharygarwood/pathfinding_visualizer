@@ -10,7 +10,6 @@ public class PathFinder {
 
     // variables used for A*
     private static final int NODE_SIZE = 25;
-    private static final int DIAGONAL_MOVE = (int) (Math.sqrt(1250));
 
     private Controller control;
     private Node start, end;
@@ -29,6 +28,7 @@ public class PathFinder {
     /**
      * inner class used for comparing Nodes
      */
+
     class NodeComparator implements Comparator<Node> {
         public int compare(Node xCoord, Node yCoord) {
             if(xCoord.getF() > yCoord.getF()) {
